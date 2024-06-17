@@ -1,12 +1,11 @@
 {
-    "name": "Rust",
-    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.12-bullseye",
+    "name": "Rust+Python",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
     "customizations": {
         "vscode": {
             "extensions": [
                 "github.copilot",
-                "github.vscode-github-actions",
-                "redhat.vscode-yaml",
+                "github.copilot-chat",
                 "esbenp.prettier-vscode",
                 "ms-toolsai.jupyter",
                 "ms-toolsai.datawrangler"
@@ -16,6 +15,9 @@
     "remoteUser": "vscode",
     "postCreateCommand": "scripts/setup.sh",
     "features": {
-        "ghcr.io/devcontainers/features/rust:1": {}
+        "ghcr.io/devcontainers/features/rust:1": {},
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.12"
+        }
     }
 }
